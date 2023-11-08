@@ -1,0 +1,26 @@
+[[servers]]
+host = "ldap.domain.tld"
+port = 389
+use_ssl = false
+start_tls = true
+ssl_skip_verify = false
+
+search_filter = "(uid=%s)"
+search_base_dns = ["ou=People,dc=domain,dc=tld"]
+
+[servers.attributes]
+member_of = "departmentNumber"
+email =  "mail"
+name = "givenName"
+surname = "sn"
+username = "displayName"
+
+[[servers.group_mappings]]
+group_dn = "sysadmin"
+org_role = "Admin"
+grafana_admin = true 
+
+
+[[servers.group_mappings]]
+group_dn = "*"
+org_role = "Viewer"
