@@ -1,7 +1,7 @@
 # grafana_openldap
 Using departmentNumber as group in grafana using openldap 
 
-I had serious issues with assigning roles to grafana using openldap. After all it seemed really easy. have a look at my ldap.toml example 
+I had a hard time with assigning roles to grafana using openldap. After all it seemed really easy. have a look at my ldap.toml example. In my case i used departmentNumber but you can also use employeeType, roomNumber, telephoneNumber or whatever ldapseach shows.
 
 the trick is to assing the attribute at the servers.attributes so in my case 
 
