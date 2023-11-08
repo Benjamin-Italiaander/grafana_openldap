@@ -6,11 +6,11 @@ I had serious issues with assigning roles to grafana using openldap. After all i
 the trick is to assing the attribute at the servers.attributes so in my case
 
 \[servers.attributes\]
-member_of = "departmentNumber" # this line passes the content of departmentNumber to group_dn at your servers.group_mappings
-email =  "mail"
-name = "givenName"
-surname = "sn"
-username = "displayName"
+member_of = "departmentNumber" # this line passes the content of departmentNumber to group_dn at your servers.group_mappings \
+email =  "mail" \
+name = "givenName" \
+surname = "sn" \
+username = "displayName" \
 
 [[servers.group_mappings]]
 group_dn = "sysadmin" # Sysadmin is in this example departmentNumber because i did declare it at servers.attributes
